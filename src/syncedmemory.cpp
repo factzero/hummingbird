@@ -37,7 +37,10 @@ inline void SyncedMemory::to_cpu()
 		m_own_cpu_data = true;
 		break;
 	case HEAD_AT_GPU:
-		NO_GPU
+#ifndef CPU_ONLY
+#else
+        NO_GPU
+#endif
 		break;
 	case HEAD_AT_CPU:
 	case SYNCED:
@@ -80,7 +83,8 @@ void SyncedMemory::set_cpu_data(void *pvdata)
 const void* SyncedMemory::gpu_data()
 {
 #ifndef CPU_ONLY
-
+    to_gpu();
+    return (const void*)m_pvgpu_data;
 #else
 	NO_GPU;
 	return nullptr;
@@ -107,7 +111,8 @@ void* SyncedMemory::mutable_cpu_data()
 void* SyncedMemory::mutable_gpu_data()
 {
 #ifndef CPU_ONLY
-
+    to_gpu();
+    return (void*)m_pvgpu_data;
 #else
 	NO_GPU;
 	return nullptr;

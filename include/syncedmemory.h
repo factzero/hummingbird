@@ -2,6 +2,7 @@
 #define HUMMINGBIRD_SYNCEDMEMORY_H_
 
 #include <cstdlib>
+#include "common.h"
 
 namespace hummingbird
 {

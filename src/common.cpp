@@ -22,6 +22,12 @@ namespace hummingbird
     {}
 
     Hummingbird::~Hummingbird() {}
+#else /* Normal GPU + CPU */
+    Hummingbird::Hummingbird()
+        :m_mode(Hummingbird::CPU)
+    {}
+
+    Hummingbird::~Hummingbird() {}
 
 #endif
 }

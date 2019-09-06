@@ -3,11 +3,18 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
     <BuildDir>$(SolutionDir)Build</BuildDir>
-    <CpuOnlyBuild>true</CpuOnlyBuild>
+    <CpuOnlyBuild>false</CpuOnlyBuild>
+    <UseCuDNN>true</UseCuDNN>
+    <CudaVersion>9.0</CudaVersion>
+    <CudaDependencies></CudaDependencies>
     
-    <BoostIncludeFolder>C:\tools\boost_1_65_1</BoostIncludeFolder>
-    <BoostLibraryFolder>C:\tools\boost_1_65_1\lib64-msvc-14.0</BoostLibraryFolder>
+    <BoostIncludeFolder>C:\tools\boost_1_66_0</BoostIncludeFolder>
+    <BoostLibraryFolder>C:\tools\boost_1_66_0\lib64-msvc-14.1</BoostLibraryFolder>
     <OpenCVRoot>$(SolutionDir)thirdparty\OpenCV</OpenCVRoot>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(CpuOnlyBuild)'=='false'">
+    <CudaDependencies>cublas.lib;cuda.lib;curand.lib;cudart.lib</CudaDependencies>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -15,7 +22,7 @@
     <IntDir>$(BuildDir)\Int\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup>
-    <LibraryPath>$(OutDir);$(BoostLibraryFolder);$(OpenCVRoot)\x64\vc14\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(OutDir);$(BoostLibraryFolder);$(CUDA_PATH)\lib\$(Platform);$(LibraryPath)</LibraryPath>
     <IncludePath>$(SolutionDir)\include;$(BoostIncludeFolder);$(OpenCVRoot)\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(CpuOnlyBuild)'=='true'">
