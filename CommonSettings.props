@@ -23,7 +23,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <LibraryPath>$(OutDir);$(BoostLibraryFolder);$(CUDA_PATH)\lib\$(Platform);$(LibraryPath)</LibraryPath>
-    <IncludePath>$(SolutionDir)\include;$(BoostIncludeFolder);$(OpenCVRoot)\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\include;$(SolutionDir)\include\test;$(BoostIncludeFolder);$(OpenCVRoot)\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(CpuOnlyBuild)'=='true'">
       <ClCompile>
