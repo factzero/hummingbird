@@ -3,6 +3,7 @@
 
 #include <cstdlib>
 #include "common.h"
+#include "hb_device_alternate.h"
 
 namespace hummingbird
 {
@@ -12,7 +13,7 @@ namespace hummingbird
 #ifndef CPU_ONLY
 		if (Hummingbird::getMode() == Hummingbird::GPU)
 		{
-
+            NO_IMPLEMENT
 		}
 #endif // !CPU_ONLY
 		*pptr = malloc(size);
@@ -25,6 +26,7 @@ namespace hummingbird
 #ifndef CPU_ONLY
 		if (buse_cuda)
 		{
+            NO_IMPLEMENT
 			return;
 		}
 #endif // !CPU_ONLY

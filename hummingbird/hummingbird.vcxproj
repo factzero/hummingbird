@@ -54,6 +54,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 9.0.props" />
   </ImportGroup>
   <ImportGroup Label="Shared">
   </ImportGroup>
@@ -156,12 +157,19 @@
   <ItemGroup>
     <ClInclude Include="..\include\blob.h" />
     <ClInclude Include="..\include\common.h" />
-    <ClInclude Include="..\include\device_alternate.h" />
+    <ClInclude Include="..\include\hb_device_alternate.h" />
     <ClInclude Include="..\include\layer.h" />
+    <ClInclude Include="..\include\hb_math_functions.h" />
     <ClInclude Include="..\include\syncedmemory.h" />
     <ClInclude Include="..\src\proto\hummingbird.pb.h" />
   </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\src\hb_math_functions.cu">
+      <FileType>Document</FileType>
+    </CudaCompile>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 9.0.targets" />
   </ImportGroup>
 </Project>

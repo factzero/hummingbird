@@ -35,11 +35,19 @@
     <ClInclude Include="..\src\proto\hummingbird.pb.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\device_alternate.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\common.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\hb_device_alternate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\hb_math_functions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\src\hb_math_functions.cu">
+      <Filter>源文件</Filter>
+    </CudaCompile>
   </ItemGroup>
 </Project>

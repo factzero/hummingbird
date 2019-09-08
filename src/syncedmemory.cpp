@@ -1,5 +1,5 @@
 #include "syncedmemory.h"
-#include "device_alternate.h"
+#include "hb_math_functions.h"
 
 namespace hummingbird
 {
@@ -8,7 +8,7 @@ SyncedMemory::SyncedMemory()
     m_own_cpu_data(false), m_own_gpu_data(false), m_cpu_malloc_use_cuda(false)
 {
 #ifndef CPU_ONLY
-    cudaGetDevice(&m_device);
+    CUDA_CHECK(cudaGetDevice(&m_device));
 #endif
 }
 
@@ -17,7 +17,7 @@ SyncedMemory::SyncedMemory(size_t size)
     m_own_cpu_data(false), m_own_gpu_data(false), m_cpu_malloc_use_cuda(false)
 {
 #ifndef CPU_ONLY
-    cudaGetDevice(&m_device);
+    CUDA_CHECK(cudaGetDevice(&m_device));
 #endif
 }
 
@@ -32,12 +32,19 @@ inline void SyncedMemory::to_cpu()
 	{
 	case UNINITIALIZED:
 		HBMallocHost(&m_pvcpu_data, m_data_size, &m_cpu_malloc_use_cuda);
-		memset(m_pvcpu_data, 0, m_data_size);
+        hb_cpu_memset(m_data_size, 0, m_pvcpu_data);
 		m_head = HEAD_AT_CPU;
 		m_own_cpu_data = true;
 		break;
 	case HEAD_AT_GPU:
 #ifndef CPU_ONLY
+        if (nullptr == m_pvcpu_data)
+        {
+            HBMallocHost(&m_pvcpu_data, m_data_size, &m_cpu_malloc_use_cuda);
+            m_own_cpu_data = true;
+        }
+        hb_gpu_memcpy(m_data_size, m_pvgpu_data, m_pvcpu_data);
+        m_head = SYNCED;
 #else
         NO_GPU
 #endif
@@ -53,7 +60,27 @@ inline void SyncedMemory::to_cpu()
 inline void SyncedMemory::to_gpu()
 {
 #ifndef CPU_ONLY
-
+    switch (m_head)
+    {
+    case UNINITIALIZED:
+        CUDA_CHECK(cudaMalloc(&m_pvgpu_data, m_data_size));
+        hb_gpu_memset(m_data_size, 0, m_pvgpu_data);
+        m_head = HEAD_AT_GPU;
+        m_own_gpu_data = true;
+        break;
+    case HEAD_AT_CPU:
+        if (nullptr == m_pvgpu_data)
+        {
+            CUDA_CHECK(cudaMalloc(&m_pvgpu_data, m_data_size));
+            m_own_gpu_data = true;
+        }
+        hb_gpu_memcpy(m_data_size, m_pvcpu_data, m_pvgpu_data);
+        m_head = SYNCED;
+        break;
+    case HEAD_AT_GPU:
+    case SYNCED:
+        break;
+}
 #else
 	NO_GPU
 #endif
@@ -94,7 +121,7 @@ const void* SyncedMemory::gpu_data()
 void SyncedMemory::set_gpu_data(void *pvdata)
 {
 #ifndef CPU_ONLY
-
+    NO_IMPLEMENT
 #else
 	NO_GPU;
 #endif
@@ -112,6 +139,7 @@ void* SyncedMemory::mutable_gpu_data()
 {
 #ifndef CPU_ONLY
     to_gpu();
+    m_head = HEAD_AT_GPU;
     return (void*)m_pvgpu_data;
 #else
 	NO_GPU;
