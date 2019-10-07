@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-package jaguar;
+package hummingbird;
 
 // Specifies the shape (dimensions) of a Blob.
 message BlobShape {

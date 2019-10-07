@@ -30,7 +30,7 @@
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 
-namespace jaguar {
+namespace hummingbird {
 
 // Internal implementation detail -- do not call these.
 void protobuf_AddDesc_hummingbird_2eproto();
@@ -63,7 +63,7 @@ inline bool Phase_Parse(
 }
 // ===================================================================
 
-class BlobShape : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:jaguar.BlobShape) */ {
+class BlobShape : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:hummingbird.BlobShape) */ {
  public:
   BlobShape();
   virtual ~BlobShape();
@@ -146,7 +146,7 @@ class BlobShape : public ::google::protobuf::Message /* @@protoc_insertion_point
   ::google::protobuf::RepeatedField< ::google::protobuf::int64 >*
       mutable_dim();
 
-  // @@protoc_insertion_point(class_scope:jaguar.BlobShape)
+  // @@protoc_insertion_point(class_scope:hummingbird.BlobShape)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -165,7 +165,7 @@ extern ::google::protobuf::internal::ExplicitlyConstructed<BlobShape> BlobShape_
 
 // -------------------------------------------------------------------
 
-class Datum : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:jaguar.Datum) */ {
+class Datum : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:hummingbird.Datum) */ {
  public:
   Datum();
   virtual ~Datum();
@@ -295,7 +295,7 @@ class Datum : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   bool encoded() const;
   void set_encoded(bool value);
 
-  // @@protoc_insertion_point(class_scope:jaguar.Datum)
+  // @@protoc_insertion_point(class_scope:hummingbird.Datum)
  private:
   inline void set_has_channels();
   inline void clear_has_channels();
@@ -331,7 +331,7 @@ extern ::google::protobuf::internal::ExplicitlyConstructed<Datum> Datum_default_
 
 // -------------------------------------------------------------------
 
-class LayerParameter : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:jaguar.LayerParameter) */ {
+class LayerParameter : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:hummingbird.LayerParameter) */ {
  public:
   LayerParameter();
   virtual ~LayerParameter();
@@ -458,14 +458,14 @@ class LayerParameter : public ::google::protobuf::Message /* @@protoc_insertion_
   const ::google::protobuf::RepeatedPtrField< ::std::string>& top() const;
   ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_top();
 
-  // optional .jaguar.Phase phase = 10;
+  // optional .hummingbird.Phase phase = 10;
   bool has_phase() const;
   void clear_phase();
   static const int kPhaseFieldNumber = 10;
-  ::jaguar::Phase phase() const;
-  void set_phase(::jaguar::Phase value);
+  ::hummingbird::Phase phase() const;
+  void set_phase(::hummingbird::Phase value);
 
-  // @@protoc_insertion_point(class_scope:jaguar.LayerParameter)
+  // @@protoc_insertion_point(class_scope:hummingbird.LayerParameter)
  private:
   inline void set_has_name();
   inline void clear_has_name();
@@ -507,25 +507,25 @@ inline void BlobShape::clear_dim() {
   dim_.Clear();
 }
 inline ::google::protobuf::int64 BlobShape::dim(int index) const {
-  // @@protoc_insertion_point(field_get:jaguar.BlobShape.dim)
+  // @@protoc_insertion_point(field_get:hummingbird.BlobShape.dim)
   return dim_.Get(index);
 }
 inline void BlobShape::set_dim(int index, ::google::protobuf::int64 value) {
   dim_.Set(index, value);
-  // @@protoc_insertion_point(field_set:jaguar.BlobShape.dim)
+  // @@protoc_insertion_point(field_set:hummingbird.BlobShape.dim)
 }
 inline void BlobShape::add_dim(::google::protobuf::int64 value) {
   dim_.Add(value);
-  // @@protoc_insertion_point(field_add:jaguar.BlobShape.dim)
+  // @@protoc_insertion_point(field_add:hummingbird.BlobShape.dim)
 }
 inline const ::google::protobuf::RepeatedField< ::google::protobuf::int64 >&
 BlobShape::dim() const {
-  // @@protoc_insertion_point(field_list:jaguar.BlobShape.dim)
+  // @@protoc_insertion_point(field_list:hummingbird.BlobShape.dim)
   return dim_;
 }
 inline ::google::protobuf::RepeatedField< ::google::protobuf::int64 >*
 BlobShape::mutable_dim() {
-  // @@protoc_insertion_point(field_mutable_list:jaguar.BlobShape.dim)
+  // @@protoc_insertion_point(field_mutable_list:hummingbird.BlobShape.dim)
   return &dim_;
 }
 
@@ -551,13 +551,13 @@ inline void Datum::clear_channels() {
   clear_has_channels();
 }
 inline ::google::protobuf::int32 Datum::channels() const {
-  // @@protoc_insertion_point(field_get:jaguar.Datum.channels)
+  // @@protoc_insertion_point(field_get:hummingbird.Datum.channels)
   return channels_;
 }
 inline void Datum::set_channels(::google::protobuf::int32 value) {
   set_has_channels();
   channels_ = value;
-  // @@protoc_insertion_point(field_set:jaguar.Datum.channels)
+  // @@protoc_insertion_point(field_set:hummingbird.Datum.channels)
 }
 
 // optional int32 height = 2;
@@ -575,13 +575,13 @@ inline void Datum::clear_height() {
   clear_has_height();
 }
 inline ::google::protobuf::int32 Datum::height() const {
-  // @@protoc_insertion_point(field_get:jaguar.Datum.height)
+  // @@protoc_insertion_point(field_get:hummingbird.Datum.height)
   return height_;
 }
 inline void Datum::set_height(::google::protobuf::int32 value) {
   set_has_height();
   height_ = value;
-  // @@protoc_insertion_point(field_set:jaguar.Datum.height)
+  // @@protoc_insertion_point(field_set:hummingbird.Datum.height)
 }
 
 // optional int32 width = 3;
@@ -599,13 +599,13 @@ inline void Datum::clear_width() {
   clear_has_width();
 }
 inline ::google::protobuf::int32 Datum::width() const {
-  // @@protoc_insertion_point(field_get:jaguar.Datum.width)
+  // @@protoc_insertion_point(field_get:hummingbird.Datum.width)
   return width_;
 }
 inline void Datum::set_width(::google::protobuf::int32 value) {
   set_has_width();
   width_ = value;
-  // @@protoc_insertion_point(field_set:jaguar.Datum.width)
+  // @@protoc_insertion_point(field_set:hummingbird.Datum.width)
 }
 
 // optional bytes data = 4;
@@ -623,32 +623,32 @@ inline void Datum::clear_data() {
   clear_has_data();
 }
 inline const ::std::string& Datum::data() const {
-  // @@protoc_insertion_point(field_get:jaguar.Datum.data)
+  // @@protoc_insertion_point(field_get:hummingbird.Datum.data)
   return data_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void Datum::set_data(const ::std::string& value) {
   set_has_data();
   data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:jaguar.Datum.data)
+  // @@protoc_insertion_point(field_set:hummingbird.Datum.data)
 }
 inline void Datum::set_data(const char* value) {
   set_has_data();
   data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:jaguar.Datum.data)
+  // @@protoc_insertion_point(field_set_char:hummingbird.Datum.data)
 }
 inline void Datum::set_data(const void* value, size_t size) {
   set_has_data();
   data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:jaguar.Datum.data)
+  // @@protoc_insertion_point(field_set_pointer:hummingbird.Datum.data)
 }
 inline ::std::string* Datum::mutable_data() {
   set_has_data();
-  // @@protoc_insertion_point(field_mutable:jaguar.Datum.data)
+  // @@protoc_insertion_point(field_mutable:hummingbird.Datum.data)
   return data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Datum::release_data() {
-  // @@protoc_insertion_point(field_release:jaguar.Datum.data)
+  // @@protoc_insertion_point(field_release:hummingbird.Datum.data)
   clear_has_data();
   return data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -659,7 +659,7 @@ inline void Datum::set_allocated_data(::std::string* data) {
     clear_has_data();
   }
   data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), data);
-  // @@protoc_insertion_point(field_set_allocated:jaguar.Datum.data)
+  // @@protoc_insertion_point(field_set_allocated:hummingbird.Datum.data)
 }
 
 // optional int32 label = 5;
@@ -677,13 +677,13 @@ inline void Datum::clear_label() {
   clear_has_label();
 }
 inline ::google::protobuf::int32 Datum::label() const {
-  // @@protoc_insertion_point(field_get:jaguar.Datum.label)
+  // @@protoc_insertion_point(field_get:hummingbird.Datum.label)
   return label_;
 }
 inline void Datum::set_label(::google::protobuf::int32 value) {
   set_has_label();
   label_ = value;
-  // @@protoc_insertion_point(field_set:jaguar.Datum.label)
+  // @@protoc_insertion_point(field_set:hummingbird.Datum.label)
 }
 
 // repeated float float_data = 6;
@@ -694,25 +694,25 @@ inline void Datum::clear_float_data() {
   float_data_.Clear();
 }
 inline float Datum::float_data(int index) const {
-  // @@protoc_insertion_point(field_get:jaguar.Datum.float_data)
+  // @@protoc_insertion_point(field_get:hummingbird.Datum.float_data)
   return float_data_.Get(index);
 }
 inline void Datum::set_float_data(int index, float value) {
   float_data_.Set(index, value);
-  // @@protoc_insertion_point(field_set:jaguar.Datum.float_data)
+  // @@protoc_insertion_point(field_set:hummingbird.Datum.float_data)
 }
 inline void Datum::add_float_data(float value) {
   float_data_.Add(value);
-  // @@protoc_insertion_point(field_add:jaguar.Datum.float_data)
+  // @@protoc_insertion_point(field_add:hummingbird.Datum.float_data)
 }
 inline const ::google::protobuf::RepeatedField< float >&
 Datum::float_data() const {
-  // @@protoc_insertion_point(field_list:jaguar.Datum.float_data)
+  // @@protoc_insertion_point(field_list:hummingbird.Datum.float_data)
   return float_data_;
 }
 inline ::google::protobuf::RepeatedField< float >*
 Datum::mutable_float_data() {
-  // @@protoc_insertion_point(field_mutable_list:jaguar.Datum.float_data)
+  // @@protoc_insertion_point(field_mutable_list:hummingbird.Datum.float_data)
   return &float_data_;
 }
 
@@ -731,13 +731,13 @@ inline void Datum::clear_encoded() {
   clear_has_encoded();
 }
 inline bool Datum::encoded() const {
-  // @@protoc_insertion_point(field_get:jaguar.Datum.encoded)
+  // @@protoc_insertion_point(field_get:hummingbird.Datum.encoded)
   return encoded_;
 }
 inline void Datum::set_encoded(bool value) {
   set_has_encoded();
   encoded_ = value;
-  // @@protoc_insertion_point(field_set:jaguar.Datum.encoded)
+  // @@protoc_insertion_point(field_set:hummingbird.Datum.encoded)
 }
 
 inline const Datum* Datum::internal_default_instance() {
@@ -762,32 +762,32 @@ inline void LayerParameter::clear_name() {
   clear_has_name();
 }
 inline const ::std::string& LayerParameter::name() const {
-  // @@protoc_insertion_point(field_get:jaguar.LayerParameter.name)
+  // @@protoc_insertion_point(field_get:hummingbird.LayerParameter.name)
   return name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void LayerParameter::set_name(const ::std::string& value) {
   set_has_name();
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:jaguar.LayerParameter.name)
+  // @@protoc_insertion_point(field_set:hummingbird.LayerParameter.name)
 }
 inline void LayerParameter::set_name(const char* value) {
   set_has_name();
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:jaguar.LayerParameter.name)
+  // @@protoc_insertion_point(field_set_char:hummingbird.LayerParameter.name)
 }
 inline void LayerParameter::set_name(const char* value, size_t size) {
   set_has_name();
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:jaguar.LayerParameter.name)
+  // @@protoc_insertion_point(field_set_pointer:hummingbird.LayerParameter.name)
 }
 inline ::std::string* LayerParameter::mutable_name() {
   set_has_name();
-  // @@protoc_insertion_point(field_mutable:jaguar.LayerParameter.name)
+  // @@protoc_insertion_point(field_mutable:hummingbird.LayerParameter.name)
   return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* LayerParameter::release_name() {
-  // @@protoc_insertion_point(field_release:jaguar.LayerParameter.name)
+  // @@protoc_insertion_point(field_release:hummingbird.LayerParameter.name)
   clear_has_name();
   return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -798,7 +798,7 @@ inline void LayerParameter::set_allocated_name(::std::string* name) {
     clear_has_name();
   }
   name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
-  // @@protoc_insertion_point(field_set_allocated:jaguar.LayerParameter.name)
+  // @@protoc_insertion_point(field_set_allocated:hummingbird.LayerParameter.name)
 }
 
 // optional string type = 2;
@@ -816,32 +816,32 @@ inline void LayerParameter::clear_type() {
   clear_has_type();
 }
 inline const ::std::string& LayerParameter::type() const {
-  // @@protoc_insertion_point(field_get:jaguar.LayerParameter.type)
+  // @@protoc_insertion_point(field_get:hummingbird.LayerParameter.type)
   return type_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void LayerParameter::set_type(const ::std::string& value) {
   set_has_type();
   type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:jaguar.LayerParameter.type)
+  // @@protoc_insertion_point(field_set:hummingbird.LayerParameter.type)
 }
 inline void LayerParameter::set_type(const char* value) {
   set_has_type();
   type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:jaguar.LayerParameter.type)
+  // @@protoc_insertion_point(field_set_char:hummingbird.LayerParameter.type)
 }
 inline void LayerParameter::set_type(const char* value, size_t size) {
   set_has_type();
   type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:jaguar.LayerParameter.type)
+  // @@protoc_insertion_point(field_set_pointer:hummingbird.LayerParameter.type)
 }
 inline ::std::string* LayerParameter::mutable_type() {
   set_has_type();
-  // @@protoc_insertion_point(field_mutable:jaguar.LayerParameter.type)
+  // @@protoc_insertion_point(field_mutable:hummingbird.LayerParameter.type)
   return type_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* LayerParameter::release_type() {
-  // @@protoc_insertion_point(field_release:jaguar.LayerParameter.type)
+  // @@protoc_insertion_point(field_release:hummingbird.LayerParameter.type)
   clear_has_type();
   return type_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -852,7 +852,7 @@ inline void LayerParameter::set_allocated_type(::std::string* type) {
     clear_has_type();
   }
   type_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), type);
-  // @@protoc_insertion_point(field_set_allocated:jaguar.LayerParameter.type)
+  // @@protoc_insertion_point(field_set_allocated:hummingbird.LayerParameter.type)
 }
 
 // repeated string bottom = 3;
@@ -863,50 +863,50 @@ inline void LayerParameter::clear_bottom() {
   bottom_.Clear();
 }
 inline const ::std::string& LayerParameter::bottom(int index) const {
-  // @@protoc_insertion_point(field_get:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_get:hummingbird.LayerParameter.bottom)
   return bottom_.Get(index);
 }
 inline ::std::string* LayerParameter::mutable_bottom(int index) {
-  // @@protoc_insertion_point(field_mutable:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_mutable:hummingbird.LayerParameter.bottom)
   return bottom_.Mutable(index);
 }
 inline void LayerParameter::set_bottom(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_set:hummingbird.LayerParameter.bottom)
   bottom_.Mutable(index)->assign(value);
 }
 inline void LayerParameter::set_bottom(int index, const char* value) {
   bottom_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_set_char:hummingbird.LayerParameter.bottom)
 }
 inline void LayerParameter::set_bottom(int index, const char* value, size_t size) {
   bottom_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_set_pointer:hummingbird.LayerParameter.bottom)
 }
 inline ::std::string* LayerParameter::add_bottom() {
-  // @@protoc_insertion_point(field_add_mutable:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_add_mutable:hummingbird.LayerParameter.bottom)
   return bottom_.Add();
 }
 inline void LayerParameter::add_bottom(const ::std::string& value) {
   bottom_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_add:hummingbird.LayerParameter.bottom)
 }
 inline void LayerParameter::add_bottom(const char* value) {
   bottom_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_add_char:hummingbird.LayerParameter.bottom)
 }
 inline void LayerParameter::add_bottom(const char* value, size_t size) {
   bottom_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_add_pointer:hummingbird.LayerParameter.bottom)
 }
 inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
 LayerParameter::bottom() const {
-  // @@protoc_insertion_point(field_list:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_list:hummingbird.LayerParameter.bottom)
   return bottom_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::std::string>*
 LayerParameter::mutable_bottom() {
-  // @@protoc_insertion_point(field_mutable_list:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_mutable_list:hummingbird.LayerParameter.bottom)
   return &bottom_;
 }
 
@@ -918,54 +918,54 @@ inline void LayerParameter::clear_top() {
   top_.Clear();
 }
 inline const ::std::string& LayerParameter::top(int index) const {
-  // @@protoc_insertion_point(field_get:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_get:hummingbird.LayerParameter.top)
   return top_.Get(index);
 }
 inline ::std::string* LayerParameter::mutable_top(int index) {
-  // @@protoc_insertion_point(field_mutable:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_mutable:hummingbird.LayerParameter.top)
   return top_.Mutable(index);
 }
 inline void LayerParameter::set_top(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_set:hummingbird.LayerParameter.top)
   top_.Mutable(index)->assign(value);
 }
 inline void LayerParameter::set_top(int index, const char* value) {
   top_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_set_char:hummingbird.LayerParameter.top)
 }
 inline void LayerParameter::set_top(int index, const char* value, size_t size) {
   top_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_set_pointer:hummingbird.LayerParameter.top)
 }
 inline ::std::string* LayerParameter::add_top() {
-  // @@protoc_insertion_point(field_add_mutable:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_add_mutable:hummingbird.LayerParameter.top)
   return top_.Add();
 }
 inline void LayerParameter::add_top(const ::std::string& value) {
   top_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_add:hummingbird.LayerParameter.top)
 }
 inline void LayerParameter::add_top(const char* value) {
   top_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_add_char:hummingbird.LayerParameter.top)
 }
 inline void LayerParameter::add_top(const char* value, size_t size) {
   top_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_add_pointer:hummingbird.LayerParameter.top)
 }
 inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
 LayerParameter::top() const {
-  // @@protoc_insertion_point(field_list:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_list:hummingbird.LayerParameter.top)
   return top_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::std::string>*
 LayerParameter::mutable_top() {
-  // @@protoc_insertion_point(field_mutable_list:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_mutable_list:hummingbird.LayerParameter.top)
   return &top_;
 }
 
-// optional .jaguar.Phase phase = 10;
+// optional .hummingbird.Phase phase = 10;
 inline bool LayerParameter::has_phase() const {
   return (_has_bits_[0] & 0x00000010u) != 0;
 }
@@ -979,15 +979,15 @@ inline void LayerParameter::clear_phase() {
   phase_ = 0;
   clear_has_phase();
 }
-inline ::jaguar::Phase LayerParameter::phase() const {
-  // @@protoc_insertion_point(field_get:jaguar.LayerParameter.phase)
-  return static_cast< ::jaguar::Phase >(phase_);
+inline ::hummingbird::Phase LayerParameter::phase() const {
+  // @@protoc_insertion_point(field_get:hummingbird.LayerParameter.phase)
+  return static_cast< ::hummingbird::Phase >(phase_);
 }
-inline void LayerParameter::set_phase(::jaguar::Phase value) {
-  assert(::jaguar::Phase_IsValid(value));
+inline void LayerParameter::set_phase(::hummingbird::Phase value) {
+  assert(::hummingbird::Phase_IsValid(value));
   set_has_phase();
   phase_ = value;
-  // @@protoc_insertion_point(field_set:jaguar.LayerParameter.phase)
+  // @@protoc_insertion_point(field_set:hummingbird.LayerParameter.phase)
 }
 
 inline const LayerParameter* LayerParameter::internal_default_instance() {
@@ -1001,16 +1001,16 @@ inline const LayerParameter* LayerParameter::internal_default_instance() {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace jaguar
+}  // namespace hummingbird
 
 #ifndef SWIG
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::jaguar::Phase> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::hummingbird::Phase> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::jaguar::Phase>() {
-  return ::jaguar::Phase_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::hummingbird::Phase>() {
+  return ::hummingbird::Phase_descriptor();
 }
 
 }  // namespace protobuf

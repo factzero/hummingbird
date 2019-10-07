@@ -17,7 +17,7 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 
-namespace jaguar {
+namespace hummingbird {
 
 namespace {
 
@@ -150,15 +150,15 @@ void protobuf_AddDesc_hummingbird_2eproto_impl() {
 
   protobuf_InitDefaults_hummingbird_2eproto();
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\021hummingbird.proto\022\006jaguar\"\034\n\tBlobShape"
-    "\022\017\n\003dim\030\001 \003(\003B\002\020\001\"\201\001\n\005Datum\022\020\n\010channels\030"
-    "\001 \001(\005\022\016\n\006height\030\002 \001(\005\022\r\n\005width\030\003 \001(\005\022\014\n\004"
-    "data\030\004 \001(\014\022\r\n\005label\030\005 \001(\005\022\022\n\nfloat_data\030"
-    "\006 \003(\002\022\026\n\007encoded\030\007 \001(\010:\005false\"g\n\016LayerPa"
-    "rameter\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\016\n\006b"
-    "ottom\030\003 \003(\t\022\013\n\003top\030\004 \003(\t\022\034\n\005phase\030\n \001(\0162"
-    "\r.jaguar.Phase*\034\n\005Phase\022\t\n\005TRAIN\020\000\022\010\n\004TE"
-    "ST\020\001", 324);
+    "\n\021hummingbird.proto\022\013hummingbird\"\034\n\tBlob"
+    "Shape\022\017\n\003dim\030\001 \003(\003B\002\020\001\"\201\001\n\005Datum\022\020\n\010chan"
+    "nels\030\001 \001(\005\022\016\n\006height\030\002 \001(\005\022\r\n\005width\030\003 \001("
+    "\005\022\014\n\004data\030\004 \001(\014\022\r\n\005label\030\005 \001(\005\022\022\n\nfloat_"
+    "data\030\006 \003(\002\022\026\n\007encoded\030\007 \001(\010:\005false\"l\n\016La"
+    "yerParameter\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t"
+    "\022\016\n\006bottom\030\003 \003(\t\022\013\n\003top\030\004 \003(\t\022!\n\005phase\030\n"
+    " \001(\0162\022.hummingbird.Phase*\034\n\005Phase\022\t\n\005TRA"
+    "IN\020\000\022\010\n\004TEST\020\001", 334);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "hummingbird.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_hummingbird_2eproto);
@@ -210,7 +210,7 @@ BlobShape::BlobShape()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   if (this != internal_default_instance()) protobuf_InitDefaults_hummingbird_2eproto();
   SharedCtor();
-  // @@protoc_insertion_point(constructor:jaguar.BlobShape)
+  // @@protoc_insertion_point(constructor:hummingbird.BlobShape)
 }
 
 void BlobShape::InitAsDefaultInstance() {
@@ -221,7 +221,7 @@ BlobShape::BlobShape(const BlobShape& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   UnsafeMergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:jaguar.BlobShape)
+  // @@protoc_insertion_point(copy_constructor:hummingbird.BlobShape)
 }
 
 void BlobShape::SharedCtor() {
@@ -229,7 +229,7 @@ void BlobShape::SharedCtor() {
 }
 
 BlobShape::~BlobShape() {
-  // @@protoc_insertion_point(destructor:jaguar.BlobShape)
+  // @@protoc_insertion_point(destructor:hummingbird.BlobShape)
   SharedDtor();
 }
 
@@ -262,7 +262,7 @@ BlobShape* BlobShape::New(::google::protobuf::Arena* arena) const {
 }
 
 void BlobShape::Clear() {
-// @@protoc_insertion_point(message_clear_start:jaguar.BlobShape)
+// @@protoc_insertion_point(message_clear_start:hummingbird.BlobShape)
   dim_.Clear();
   _has_bits_.Clear();
   if (_internal_metadata_.have_unknown_fields()) {
@@ -274,7 +274,7 @@ bool BlobShape::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:jaguar.BlobShape)
+  // @@protoc_insertion_point(parse_start:hummingbird.BlobShape)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
@@ -311,17 +311,17 @@ bool BlobShape::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:jaguar.BlobShape)
+  // @@protoc_insertion_point(parse_success:hummingbird.BlobShape)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:jaguar.BlobShape)
+  // @@protoc_insertion_point(parse_failure:hummingbird.BlobShape)
   return false;
 #undef DO_
 }
 
 void BlobShape::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:jaguar.BlobShape)
+  // @@protoc_insertion_point(serialize_start:hummingbird.BlobShape)
   // repeated int64 dim = 1 [packed = true];
   if (this->dim_size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteTag(1, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
@@ -336,13 +336,13 @@ void BlobShape::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:jaguar.BlobShape)
+  // @@protoc_insertion_point(serialize_end:hummingbird.BlobShape)
 }
 
 ::google::protobuf::uint8* BlobShape::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:jaguar.BlobShape)
+  // @@protoc_insertion_point(serialize_to_array_start:hummingbird.BlobShape)
   // repeated int64 dim = 1 [packed = true];
   if (this->dim_size() > 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteTagToArray(
@@ -361,12 +361,12 @@ void BlobShape::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:jaguar.BlobShape)
+  // @@protoc_insertion_point(serialize_to_array_end:hummingbird.BlobShape)
   return target;
 }
 
 size_t BlobShape::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:jaguar.BlobShape)
+// @@protoc_insertion_point(message_byte_size_start:hummingbird.BlobShape)
   size_t total_size = 0;
 
   // repeated int64 dim = 1 [packed = true];
@@ -401,22 +401,22 @@ size_t BlobShape::ByteSizeLong() const {
 }
 
 void BlobShape::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:jaguar.BlobShape)
+// @@protoc_insertion_point(generalized_merge_from_start:hummingbird.BlobShape)
   if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
   const BlobShape* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const BlobShape>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:jaguar.BlobShape)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:hummingbird.BlobShape)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:jaguar.BlobShape)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:hummingbird.BlobShape)
     UnsafeMergeFrom(*source);
   }
 }
 
 void BlobShape::MergeFrom(const BlobShape& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:jaguar.BlobShape)
+// @@protoc_insertion_point(class_specific_merge_from_start:hummingbird.BlobShape)
   if (GOOGLE_PREDICT_TRUE(&from != this)) {
     UnsafeMergeFrom(from);
   } else {
@@ -434,14 +434,14 @@ void BlobShape::UnsafeMergeFrom(const BlobShape& from) {
 }
 
 void BlobShape::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:jaguar.BlobShape)
+// @@protoc_insertion_point(generalized_copy_from_start:hummingbird.BlobShape)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void BlobShape::CopyFrom(const BlobShape& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:jaguar.BlobShape)
+// @@protoc_insertion_point(class_specific_copy_from_start:hummingbird.BlobShape)
   if (&from == this) return;
   Clear();
   UnsafeMergeFrom(from);
@@ -482,25 +482,25 @@ void BlobShape::clear_dim() {
   dim_.Clear();
 }
 ::google::protobuf::int64 BlobShape::dim(int index) const {
-  // @@protoc_insertion_point(field_get:jaguar.BlobShape.dim)
+  // @@protoc_insertion_point(field_get:hummingbird.BlobShape.dim)
   return dim_.Get(index);
 }
 void BlobShape::set_dim(int index, ::google::protobuf::int64 value) {
   dim_.Set(index, value);
-  // @@protoc_insertion_point(field_set:jaguar.BlobShape.dim)
+  // @@protoc_insertion_point(field_set:hummingbird.BlobShape.dim)
 }
 void BlobShape::add_dim(::google::protobuf::int64 value) {
   dim_.Add(value);
-  // @@protoc_insertion_point(field_add:jaguar.BlobShape.dim)
+  // @@protoc_insertion_point(field_add:hummingbird.BlobShape.dim)
 }
 const ::google::protobuf::RepeatedField< ::google::protobuf::int64 >&
 BlobShape::dim() const {
-  // @@protoc_insertion_point(field_list:jaguar.BlobShape.dim)
+  // @@protoc_insertion_point(field_list:hummingbird.BlobShape.dim)
   return dim_;
 }
 ::google::protobuf::RepeatedField< ::google::protobuf::int64 >*
 BlobShape::mutable_dim() {
-  // @@protoc_insertion_point(field_mutable_list:jaguar.BlobShape.dim)
+  // @@protoc_insertion_point(field_mutable_list:hummingbird.BlobShape.dim)
   return &dim_;
 }
 
@@ -525,7 +525,7 @@ Datum::Datum()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   if (this != internal_default_instance()) protobuf_InitDefaults_hummingbird_2eproto();
   SharedCtor();
-  // @@protoc_insertion_point(constructor:jaguar.Datum)
+  // @@protoc_insertion_point(constructor:hummingbird.Datum)
 }
 
 void Datum::InitAsDefaultInstance() {
@@ -536,7 +536,7 @@ Datum::Datum(const Datum& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   UnsafeMergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:jaguar.Datum)
+  // @@protoc_insertion_point(copy_constructor:hummingbird.Datum)
 }
 
 void Datum::SharedCtor() {
@@ -547,7 +547,7 @@ void Datum::SharedCtor() {
 }
 
 Datum::~Datum() {
-  // @@protoc_insertion_point(destructor:jaguar.Datum)
+  // @@protoc_insertion_point(destructor:hummingbird.Datum)
   SharedDtor();
 }
 
@@ -581,7 +581,7 @@ Datum* Datum::New(::google::protobuf::Arena* arena) const {
 }
 
 void Datum::Clear() {
-// @@protoc_insertion_point(message_clear_start:jaguar.Datum)
+// @@protoc_insertion_point(message_clear_start:hummingbird.Datum)
 #if defined(__clang__)
 #define ZR_HELPER_(f) \
   _Pragma("clang diagnostic push") \
@@ -619,7 +619,7 @@ bool Datum::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:jaguar.Datum)
+  // @@protoc_insertion_point(parse_start:hummingbird.Datum)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
@@ -745,17 +745,17 @@ bool Datum::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:jaguar.Datum)
+  // @@protoc_insertion_point(parse_success:hummingbird.Datum)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:jaguar.Datum)
+  // @@protoc_insertion_point(parse_failure:hummingbird.Datum)
   return false;
 #undef DO_
 }
 
 void Datum::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:jaguar.Datum)
+  // @@protoc_insertion_point(serialize_start:hummingbird.Datum)
   // optional int32 channels = 1;
   if (has_channels()) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->channels(), output);
@@ -797,13 +797,13 @@ void Datum::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:jaguar.Datum)
+  // @@protoc_insertion_point(serialize_end:hummingbird.Datum)
 }
 
 ::google::protobuf::uint8* Datum::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:jaguar.Datum)
+  // @@protoc_insertion_point(serialize_to_array_start:hummingbird.Datum)
   // optional int32 channels = 1;
   if (has_channels()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->channels(), target);
@@ -846,12 +846,12 @@ void Datum::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:jaguar.Datum)
+  // @@protoc_insertion_point(serialize_to_array_end:hummingbird.Datum)
   return target;
 }
 
 size_t Datum::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:jaguar.Datum)
+// @@protoc_insertion_point(message_byte_size_start:hummingbird.Datum)
   size_t total_size = 0;
 
   if (_has_bits_[0 / 32] & 95u) {
@@ -919,22 +919,22 @@ size_t Datum::ByteSizeLong() const {
 }
 
 void Datum::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:jaguar.Datum)
+// @@protoc_insertion_point(generalized_merge_from_start:hummingbird.Datum)
   if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
   const Datum* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const Datum>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:jaguar.Datum)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:hummingbird.Datum)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:jaguar.Datum)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:hummingbird.Datum)
     UnsafeMergeFrom(*source);
   }
 }
 
 void Datum::MergeFrom(const Datum& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:jaguar.Datum)
+// @@protoc_insertion_point(class_specific_merge_from_start:hummingbird.Datum)
   if (GOOGLE_PREDICT_TRUE(&from != this)) {
     UnsafeMergeFrom(from);
   } else {
@@ -973,14 +973,14 @@ void Datum::UnsafeMergeFrom(const Datum& from) {
 }
 
 void Datum::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:jaguar.Datum)
+// @@protoc_insertion_point(generalized_copy_from_start:hummingbird.Datum)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void Datum::CopyFrom(const Datum& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:jaguar.Datum)
+// @@protoc_insertion_point(class_specific_copy_from_start:hummingbird.Datum)
   if (&from == this) return;
   Clear();
   UnsafeMergeFrom(from);
@@ -1034,13 +1034,13 @@ void Datum::clear_channels() {
   clear_has_channels();
 }
 ::google::protobuf::int32 Datum::channels() const {
-  // @@protoc_insertion_point(field_get:jaguar.Datum.channels)
+  // @@protoc_insertion_point(field_get:hummingbird.Datum.channels)
   return channels_;
 }
 void Datum::set_channels(::google::protobuf::int32 value) {
   set_has_channels();
   channels_ = value;
-  // @@protoc_insertion_point(field_set:jaguar.Datum.channels)
+  // @@protoc_insertion_point(field_set:hummingbird.Datum.channels)
 }
 
 // optional int32 height = 2;
@@ -1058,13 +1058,13 @@ void Datum::clear_height() {
   clear_has_height();
 }
 ::google::protobuf::int32 Datum::height() const {
-  // @@protoc_insertion_point(field_get:jaguar.Datum.height)
+  // @@protoc_insertion_point(field_get:hummingbird.Datum.height)
   return height_;
 }
 void Datum::set_height(::google::protobuf::int32 value) {
   set_has_height();
   height_ = value;
-  // @@protoc_insertion_point(field_set:jaguar.Datum.height)
+  // @@protoc_insertion_point(field_set:hummingbird.Datum.height)
 }
 
 // optional int32 width = 3;
@@ -1082,13 +1082,13 @@ void Datum::clear_width() {
   clear_has_width();
 }
 ::google::protobuf::int32 Datum::width() const {
-  // @@protoc_insertion_point(field_get:jaguar.Datum.width)
+  // @@protoc_insertion_point(field_get:hummingbird.Datum.width)
   return width_;
 }
 void Datum::set_width(::google::protobuf::int32 value) {
   set_has_width();
   width_ = value;
-  // @@protoc_insertion_point(field_set:jaguar.Datum.width)
+  // @@protoc_insertion_point(field_set:hummingbird.Datum.width)
 }
 
 // optional bytes data = 4;
@@ -1106,32 +1106,32 @@ void Datum::clear_data() {
   clear_has_data();
 }
 const ::std::string& Datum::data() const {
-  // @@protoc_insertion_point(field_get:jaguar.Datum.data)
+  // @@protoc_insertion_point(field_get:hummingbird.Datum.data)
   return data_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void Datum::set_data(const ::std::string& value) {
   set_has_data();
   data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:jaguar.Datum.data)
+  // @@protoc_insertion_point(field_set:hummingbird.Datum.data)
 }
 void Datum::set_data(const char* value) {
   set_has_data();
   data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:jaguar.Datum.data)
+  // @@protoc_insertion_point(field_set_char:hummingbird.Datum.data)
 }
 void Datum::set_data(const void* value, size_t size) {
   set_has_data();
   data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:jaguar.Datum.data)
+  // @@protoc_insertion_point(field_set_pointer:hummingbird.Datum.data)
 }
 ::std::string* Datum::mutable_data() {
   set_has_data();
-  // @@protoc_insertion_point(field_mutable:jaguar.Datum.data)
+  // @@protoc_insertion_point(field_mutable:hummingbird.Datum.data)
   return data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* Datum::release_data() {
-  // @@protoc_insertion_point(field_release:jaguar.Datum.data)
+  // @@protoc_insertion_point(field_release:hummingbird.Datum.data)
   clear_has_data();
   return data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1142,7 +1142,7 @@ void Datum::set_allocated_data(::std::string* data) {
     clear_has_data();
   }
   data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), data);
-  // @@protoc_insertion_point(field_set_allocated:jaguar.Datum.data)
+  // @@protoc_insertion_point(field_set_allocated:hummingbird.Datum.data)
 }
 
 // optional int32 label = 5;
@@ -1160,13 +1160,13 @@ void Datum::clear_label() {
   clear_has_label();
 }
 ::google::protobuf::int32 Datum::label() const {
-  // @@protoc_insertion_point(field_get:jaguar.Datum.label)
+  // @@protoc_insertion_point(field_get:hummingbird.Datum.label)
   return label_;
 }
 void Datum::set_label(::google::protobuf::int32 value) {
   set_has_label();
   label_ = value;
-  // @@protoc_insertion_point(field_set:jaguar.Datum.label)
+  // @@protoc_insertion_point(field_set:hummingbird.Datum.label)
 }
 
 // repeated float float_data = 6;
@@ -1177,25 +1177,25 @@ void Datum::clear_float_data() {
   float_data_.Clear();
 }
 float Datum::float_data(int index) const {
-  // @@protoc_insertion_point(field_get:jaguar.Datum.float_data)
+  // @@protoc_insertion_point(field_get:hummingbird.Datum.float_data)
   return float_data_.Get(index);
 }
 void Datum::set_float_data(int index, float value) {
   float_data_.Set(index, value);
-  // @@protoc_insertion_point(field_set:jaguar.Datum.float_data)
+  // @@protoc_insertion_point(field_set:hummingbird.Datum.float_data)
 }
 void Datum::add_float_data(float value) {
   float_data_.Add(value);
-  // @@protoc_insertion_point(field_add:jaguar.Datum.float_data)
+  // @@protoc_insertion_point(field_add:hummingbird.Datum.float_data)
 }
 const ::google::protobuf::RepeatedField< float >&
 Datum::float_data() const {
-  // @@protoc_insertion_point(field_list:jaguar.Datum.float_data)
+  // @@protoc_insertion_point(field_list:hummingbird.Datum.float_data)
   return float_data_;
 }
 ::google::protobuf::RepeatedField< float >*
 Datum::mutable_float_data() {
-  // @@protoc_insertion_point(field_mutable_list:jaguar.Datum.float_data)
+  // @@protoc_insertion_point(field_mutable_list:hummingbird.Datum.float_data)
   return &float_data_;
 }
 
@@ -1214,13 +1214,13 @@ void Datum::clear_encoded() {
   clear_has_encoded();
 }
 bool Datum::encoded() const {
-  // @@protoc_insertion_point(field_get:jaguar.Datum.encoded)
+  // @@protoc_insertion_point(field_get:hummingbird.Datum.encoded)
   return encoded_;
 }
 void Datum::set_encoded(bool value) {
   set_has_encoded();
   encoded_ = value;
-  // @@protoc_insertion_point(field_set:jaguar.Datum.encoded)
+  // @@protoc_insertion_point(field_set:hummingbird.Datum.encoded)
 }
 
 inline const Datum* Datum::internal_default_instance() {
@@ -1242,7 +1242,7 @@ LayerParameter::LayerParameter()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   if (this != internal_default_instance()) protobuf_InitDefaults_hummingbird_2eproto();
   SharedCtor();
-  // @@protoc_insertion_point(constructor:jaguar.LayerParameter)
+  // @@protoc_insertion_point(constructor:hummingbird.LayerParameter)
 }
 
 void LayerParameter::InitAsDefaultInstance() {
@@ -1253,7 +1253,7 @@ LayerParameter::LayerParameter(const LayerParameter& from)
     _internal_metadata_(NULL) {
   SharedCtor();
   UnsafeMergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:jaguar.LayerParameter)
+  // @@protoc_insertion_point(copy_constructor:hummingbird.LayerParameter)
 }
 
 void LayerParameter::SharedCtor() {
@@ -1264,7 +1264,7 @@ void LayerParameter::SharedCtor() {
 }
 
 LayerParameter::~LayerParameter() {
-  // @@protoc_insertion_point(destructor:jaguar.LayerParameter)
+  // @@protoc_insertion_point(destructor:hummingbird.LayerParameter)
   SharedDtor();
 }
 
@@ -1299,7 +1299,7 @@ LayerParameter* LayerParameter::New(::google::protobuf::Arena* arena) const {
 }
 
 void LayerParameter::Clear() {
-// @@protoc_insertion_point(message_clear_start:jaguar.LayerParameter)
+// @@protoc_insertion_point(message_clear_start:hummingbird.LayerParameter)
   if (_has_bits_[0 / 32] & 19u) {
     if (has_name()) {
       name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -1321,7 +1321,7 @@ bool LayerParameter::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:jaguar.LayerParameter)
+  // @@protoc_insertion_point(parse_start:hummingbird.LayerParameter)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
@@ -1335,7 +1335,7 @@ bool LayerParameter::MergePartialFromCodedStream(
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
             this->name().data(), this->name().length(),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "jaguar.LayerParameter.name");
+            "hummingbird.LayerParameter.name");
         } else {
           goto handle_unusual;
         }
@@ -1352,7 +1352,7 @@ bool LayerParameter::MergePartialFromCodedStream(
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
             this->type().data(), this->type().length(),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "jaguar.LayerParameter.type");
+            "hummingbird.LayerParameter.type");
         } else {
           goto handle_unusual;
         }
@@ -1370,7 +1370,7 @@ bool LayerParameter::MergePartialFromCodedStream(
             this->bottom(this->bottom_size() - 1).data(),
             this->bottom(this->bottom_size() - 1).length(),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "jaguar.LayerParameter.bottom");
+            "hummingbird.LayerParameter.bottom");
         } else {
           goto handle_unusual;
         }
@@ -1389,7 +1389,7 @@ bool LayerParameter::MergePartialFromCodedStream(
             this->top(this->top_size() - 1).data(),
             this->top(this->top_size() - 1).length(),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "jaguar.LayerParameter.top");
+            "hummingbird.LayerParameter.top");
         } else {
           goto handle_unusual;
         }
@@ -1398,7 +1398,7 @@ bool LayerParameter::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .jaguar.Phase phase = 10;
+      // optional .hummingbird.Phase phase = 10;
       case 10: {
         if (tag == 80) {
          parse_phase:
@@ -1406,8 +1406,8 @@ bool LayerParameter::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
-          if (::jaguar::Phase_IsValid(value)) {
-            set_phase(static_cast< ::jaguar::Phase >(value));
+          if (::hummingbird::Phase_IsValid(value)) {
+            set_phase(static_cast< ::hummingbird::Phase >(value));
           } else {
             mutable_unknown_fields()->AddVarint(10, value);
           }
@@ -1432,23 +1432,23 @@ bool LayerParameter::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:jaguar.LayerParameter)
+  // @@protoc_insertion_point(parse_success:hummingbird.LayerParameter)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:jaguar.LayerParameter)
+  // @@protoc_insertion_point(parse_failure:hummingbird.LayerParameter)
   return false;
 #undef DO_
 }
 
 void LayerParameter::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:jaguar.LayerParameter)
+  // @@protoc_insertion_point(serialize_start:hummingbird.LayerParameter)
   // optional string name = 1;
   if (has_name()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->name().data(), this->name().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "jaguar.LayerParameter.name");
+      "hummingbird.LayerParameter.name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->name(), output);
   }
@@ -1458,7 +1458,7 @@ void LayerParameter::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->type().data(), this->type().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "jaguar.LayerParameter.type");
+      "hummingbird.LayerParameter.type");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->type(), output);
   }
@@ -1468,7 +1468,7 @@ void LayerParameter::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->bottom(i).data(), this->bottom(i).length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "jaguar.LayerParameter.bottom");
+      "hummingbird.LayerParameter.bottom");
     ::google::protobuf::internal::WireFormatLite::WriteString(
       3, this->bottom(i), output);
   }
@@ -1478,12 +1478,12 @@ void LayerParameter::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->top(i).data(), this->top(i).length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "jaguar.LayerParameter.top");
+      "hummingbird.LayerParameter.top");
     ::google::protobuf::internal::WireFormatLite::WriteString(
       4, this->top(i), output);
   }
 
-  // optional .jaguar.Phase phase = 10;
+  // optional .hummingbird.Phase phase = 10;
   if (has_phase()) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       10, this->phase(), output);
@@ -1493,19 +1493,19 @@ void LayerParameter::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:jaguar.LayerParameter)
+  // @@protoc_insertion_point(serialize_end:hummingbird.LayerParameter)
 }
 
 ::google::protobuf::uint8* LayerParameter::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:jaguar.LayerParameter)
+  // @@protoc_insertion_point(serialize_to_array_start:hummingbird.LayerParameter)
   // optional string name = 1;
   if (has_name()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->name().data(), this->name().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "jaguar.LayerParameter.name");
+      "hummingbird.LayerParameter.name");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         1, this->name(), target);
@@ -1516,7 +1516,7 @@ void LayerParameter::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->type().data(), this->type().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "jaguar.LayerParameter.type");
+      "hummingbird.LayerParameter.type");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         2, this->type(), target);
@@ -1527,7 +1527,7 @@ void LayerParameter::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->bottom(i).data(), this->bottom(i).length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "jaguar.LayerParameter.bottom");
+      "hummingbird.LayerParameter.bottom");
     target = ::google::protobuf::internal::WireFormatLite::
       WriteStringToArray(3, this->bottom(i), target);
   }
@@ -1537,12 +1537,12 @@ void LayerParameter::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->top(i).data(), this->top(i).length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "jaguar.LayerParameter.top");
+      "hummingbird.LayerParameter.top");
     target = ::google::protobuf::internal::WireFormatLite::
       WriteStringToArray(4, this->top(i), target);
   }
 
-  // optional .jaguar.Phase phase = 10;
+  // optional .hummingbird.Phase phase = 10;
   if (has_phase()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       10, this->phase(), target);
@@ -1552,12 +1552,12 @@ void LayerParameter::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:jaguar.LayerParameter)
+  // @@protoc_insertion_point(serialize_to_array_end:hummingbird.LayerParameter)
   return target;
 }
 
 size_t LayerParameter::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:jaguar.LayerParameter)
+// @@protoc_insertion_point(message_byte_size_start:hummingbird.LayerParameter)
   size_t total_size = 0;
 
   if (_has_bits_[0 / 32] & 19u) {
@@ -1575,7 +1575,7 @@ size_t LayerParameter::ByteSizeLong() const {
           this->type());
     }
 
-    // optional .jaguar.Phase phase = 10;
+    // optional .hummingbird.Phase phase = 10;
     if (has_phase()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::EnumSize(this->phase());
@@ -1611,22 +1611,22 @@ size_t LayerParameter::ByteSizeLong() const {
 }
 
 void LayerParameter::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:jaguar.LayerParameter)
+// @@protoc_insertion_point(generalized_merge_from_start:hummingbird.LayerParameter)
   if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
   const LayerParameter* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const LayerParameter>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:jaguar.LayerParameter)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:hummingbird.LayerParameter)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:jaguar.LayerParameter)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:hummingbird.LayerParameter)
     UnsafeMergeFrom(*source);
   }
 }
 
 void LayerParameter::MergeFrom(const LayerParameter& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:jaguar.LayerParameter)
+// @@protoc_insertion_point(class_specific_merge_from_start:hummingbird.LayerParameter)
   if (GOOGLE_PREDICT_TRUE(&from != this)) {
     UnsafeMergeFrom(from);
   } else {
@@ -1658,14 +1658,14 @@ void LayerParameter::UnsafeMergeFrom(const LayerParameter& from) {
 }
 
 void LayerParameter::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:jaguar.LayerParameter)
+// @@protoc_insertion_point(generalized_copy_from_start:hummingbird.LayerParameter)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void LayerParameter::CopyFrom(const LayerParameter& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:jaguar.LayerParameter)
+// @@protoc_insertion_point(class_specific_copy_from_start:hummingbird.LayerParameter)
   if (&from == this) return;
   Clear();
   UnsafeMergeFrom(from);
@@ -1717,32 +1717,32 @@ void LayerParameter::clear_name() {
   clear_has_name();
 }
 const ::std::string& LayerParameter::name() const {
-  // @@protoc_insertion_point(field_get:jaguar.LayerParameter.name)
+  // @@protoc_insertion_point(field_get:hummingbird.LayerParameter.name)
   return name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void LayerParameter::set_name(const ::std::string& value) {
   set_has_name();
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:jaguar.LayerParameter.name)
+  // @@protoc_insertion_point(field_set:hummingbird.LayerParameter.name)
 }
 void LayerParameter::set_name(const char* value) {
   set_has_name();
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:jaguar.LayerParameter.name)
+  // @@protoc_insertion_point(field_set_char:hummingbird.LayerParameter.name)
 }
 void LayerParameter::set_name(const char* value, size_t size) {
   set_has_name();
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:jaguar.LayerParameter.name)
+  // @@protoc_insertion_point(field_set_pointer:hummingbird.LayerParameter.name)
 }
 ::std::string* LayerParameter::mutable_name() {
   set_has_name();
-  // @@protoc_insertion_point(field_mutable:jaguar.LayerParameter.name)
+  // @@protoc_insertion_point(field_mutable:hummingbird.LayerParameter.name)
   return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* LayerParameter::release_name() {
-  // @@protoc_insertion_point(field_release:jaguar.LayerParameter.name)
+  // @@protoc_insertion_point(field_release:hummingbird.LayerParameter.name)
   clear_has_name();
   return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1753,7 +1753,7 @@ void LayerParameter::set_allocated_name(::std::string* name) {
     clear_has_name();
   }
   name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
-  // @@protoc_insertion_point(field_set_allocated:jaguar.LayerParameter.name)
+  // @@protoc_insertion_point(field_set_allocated:hummingbird.LayerParameter.name)
 }
 
 // optional string type = 2;
@@ -1771,32 +1771,32 @@ void LayerParameter::clear_type() {
   clear_has_type();
 }
 const ::std::string& LayerParameter::type() const {
-  // @@protoc_insertion_point(field_get:jaguar.LayerParameter.type)
+  // @@protoc_insertion_point(field_get:hummingbird.LayerParameter.type)
   return type_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void LayerParameter::set_type(const ::std::string& value) {
   set_has_type();
   type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:jaguar.LayerParameter.type)
+  // @@protoc_insertion_point(field_set:hummingbird.LayerParameter.type)
 }
 void LayerParameter::set_type(const char* value) {
   set_has_type();
   type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:jaguar.LayerParameter.type)
+  // @@protoc_insertion_point(field_set_char:hummingbird.LayerParameter.type)
 }
 void LayerParameter::set_type(const char* value, size_t size) {
   set_has_type();
   type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:jaguar.LayerParameter.type)
+  // @@protoc_insertion_point(field_set_pointer:hummingbird.LayerParameter.type)
 }
 ::std::string* LayerParameter::mutable_type() {
   set_has_type();
-  // @@protoc_insertion_point(field_mutable:jaguar.LayerParameter.type)
+  // @@protoc_insertion_point(field_mutable:hummingbird.LayerParameter.type)
   return type_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* LayerParameter::release_type() {
-  // @@protoc_insertion_point(field_release:jaguar.LayerParameter.type)
+  // @@protoc_insertion_point(field_release:hummingbird.LayerParameter.type)
   clear_has_type();
   return type_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1807,7 +1807,7 @@ void LayerParameter::set_allocated_type(::std::string* type) {
     clear_has_type();
   }
   type_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), type);
-  // @@protoc_insertion_point(field_set_allocated:jaguar.LayerParameter.type)
+  // @@protoc_insertion_point(field_set_allocated:hummingbird.LayerParameter.type)
 }
 
 // repeated string bottom = 3;
@@ -1818,50 +1818,50 @@ void LayerParameter::clear_bottom() {
   bottom_.Clear();
 }
 const ::std::string& LayerParameter::bottom(int index) const {
-  // @@protoc_insertion_point(field_get:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_get:hummingbird.LayerParameter.bottom)
   return bottom_.Get(index);
 }
 ::std::string* LayerParameter::mutable_bottom(int index) {
-  // @@protoc_insertion_point(field_mutable:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_mutable:hummingbird.LayerParameter.bottom)
   return bottom_.Mutable(index);
 }
 void LayerParameter::set_bottom(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_set:hummingbird.LayerParameter.bottom)
   bottom_.Mutable(index)->assign(value);
 }
 void LayerParameter::set_bottom(int index, const char* value) {
   bottom_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_set_char:hummingbird.LayerParameter.bottom)
 }
 void LayerParameter::set_bottom(int index, const char* value, size_t size) {
   bottom_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_set_pointer:hummingbird.LayerParameter.bottom)
 }
 ::std::string* LayerParameter::add_bottom() {
-  // @@protoc_insertion_point(field_add_mutable:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_add_mutable:hummingbird.LayerParameter.bottom)
   return bottom_.Add();
 }
 void LayerParameter::add_bottom(const ::std::string& value) {
   bottom_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_add:hummingbird.LayerParameter.bottom)
 }
 void LayerParameter::add_bottom(const char* value) {
   bottom_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_add_char:hummingbird.LayerParameter.bottom)
 }
 void LayerParameter::add_bottom(const char* value, size_t size) {
   bottom_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_add_pointer:hummingbird.LayerParameter.bottom)
 }
 const ::google::protobuf::RepeatedPtrField< ::std::string>&
 LayerParameter::bottom() const {
-  // @@protoc_insertion_point(field_list:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_list:hummingbird.LayerParameter.bottom)
   return bottom_;
 }
 ::google::protobuf::RepeatedPtrField< ::std::string>*
 LayerParameter::mutable_bottom() {
-  // @@protoc_insertion_point(field_mutable_list:jaguar.LayerParameter.bottom)
+  // @@protoc_insertion_point(field_mutable_list:hummingbird.LayerParameter.bottom)
   return &bottom_;
 }
 
@@ -1873,54 +1873,54 @@ void LayerParameter::clear_top() {
   top_.Clear();
 }
 const ::std::string& LayerParameter::top(int index) const {
-  // @@protoc_insertion_point(field_get:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_get:hummingbird.LayerParameter.top)
   return top_.Get(index);
 }
 ::std::string* LayerParameter::mutable_top(int index) {
-  // @@protoc_insertion_point(field_mutable:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_mutable:hummingbird.LayerParameter.top)
   return top_.Mutable(index);
 }
 void LayerParameter::set_top(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_set:hummingbird.LayerParameter.top)
   top_.Mutable(index)->assign(value);
 }
 void LayerParameter::set_top(int index, const char* value) {
   top_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_set_char:hummingbird.LayerParameter.top)
 }
 void LayerParameter::set_top(int index, const char* value, size_t size) {
   top_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_set_pointer:hummingbird.LayerParameter.top)
 }
 ::std::string* LayerParameter::add_top() {
-  // @@protoc_insertion_point(field_add_mutable:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_add_mutable:hummingbird.LayerParameter.top)
   return top_.Add();
 }
 void LayerParameter::add_top(const ::std::string& value) {
   top_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_add:hummingbird.LayerParameter.top)
 }
 void LayerParameter::add_top(const char* value) {
   top_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_add_char:hummingbird.LayerParameter.top)
 }
 void LayerParameter::add_top(const char* value, size_t size) {
   top_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_add_pointer:hummingbird.LayerParameter.top)
 }
 const ::google::protobuf::RepeatedPtrField< ::std::string>&
 LayerParameter::top() const {
-  // @@protoc_insertion_point(field_list:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_list:hummingbird.LayerParameter.top)
   return top_;
 }
 ::google::protobuf::RepeatedPtrField< ::std::string>*
 LayerParameter::mutable_top() {
-  // @@protoc_insertion_point(field_mutable_list:jaguar.LayerParameter.top)
+  // @@protoc_insertion_point(field_mutable_list:hummingbird.LayerParameter.top)
   return &top_;
 }
 
-// optional .jaguar.Phase phase = 10;
+// optional .hummingbird.Phase phase = 10;
 bool LayerParameter::has_phase() const {
   return (_has_bits_[0] & 0x00000010u) != 0;
 }
@@ -1934,15 +1934,15 @@ void LayerParameter::clear_phase() {
   phase_ = 0;
   clear_has_phase();
 }
-::jaguar::Phase LayerParameter::phase() const {
-  // @@protoc_insertion_point(field_get:jaguar.LayerParameter.phase)
-  return static_cast< ::jaguar::Phase >(phase_);
+::hummingbird::Phase LayerParameter::phase() const {
+  // @@protoc_insertion_point(field_get:hummingbird.LayerParameter.phase)
+  return static_cast< ::hummingbird::Phase >(phase_);
 }
-void LayerParameter::set_phase(::jaguar::Phase value) {
-  assert(::jaguar::Phase_IsValid(value));
+void LayerParameter::set_phase(::hummingbird::Phase value) {
+  assert(::hummingbird::Phase_IsValid(value));
   set_has_phase();
   phase_ = value;
-  // @@protoc_insertion_point(field_set:jaguar.LayerParameter.phase)
+  // @@protoc_insertion_point(field_set:hummingbird.LayerParameter.phase)
 }
 
 inline const LayerParameter* LayerParameter::internal_default_instance() {
@@ -1952,6 +1952,6 @@ inline const LayerParameter* LayerParameter::internal_default_instance() {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace jaguar
+}  // namespace hummingbird
 
 // @@protoc_insertion_point(global_scope)
